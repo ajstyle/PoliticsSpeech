@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <form #f="ngForm" novalidate>
+            <div class="form-group">
+
+                <textarea placeholder="Enter Speech" class="form-control" rows="5" id="speech" name="description" [ngModel]="speech.description" required></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" placeholder="Author" class="form-control" name="authors" [ngModel]="speech.authors" required />
+                </div>
+                <div class="col-md-3">
+                    <input type="text" placeholder="name" class="form-control" name="name" [ngModel]="speech.name" required/>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" placeholder="Subject area keyword" class="form-control" name="keywords" [ngModel]="speech.keywords" required />
+                </div>
+                <div class="col-md-3">
+                    <input type="date" placeholder="date" class="form-control" name="date" [ngModel]="speech.date" required/>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2" style="text-align:center">
+        <button *ngIf="!id" style="margin-top:20px;width:30%;" type=" button " class="btn btn-success btn-lg" (click)="save(f.value)" [disabled]="f.invalid">save</button>
+        <button *ngIf="id" style="margin-top:20px;width:30%;" type=" button " class="btn btn-danger btn-lg" (click)="delete()">Delete</button>
+        <button *ngIf="id" style="margin-top:20px;width:30%;" type=" button " class="btn btn-primary btn-lg" (click)="update(f.value)" [disabled]="f.pristine">Update</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+<form action="/hms/accommodations" method="GET">
+    <div class="row">
+        <div class="col-lg-7 col-md-offset-2"> 
+          
+                <input #search (keyup)="results=dataService.filter(search.value)" type="text" class="form-control" placeholder="Enter Keyword or Name" id="txtSearch" />
+
+           
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-7 col-md-offset-2">
+            <ul class="list-group">
+                <div *ngFor=" let result of results">
+                    <a [routerLink]="['/',result.id]" class="list-group-item">{{result.name}}</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+</form>

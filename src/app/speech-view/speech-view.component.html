@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4 ">
+            <ul class="list-group">
+                <div *ngFor=" let result of results">
+                    <a [routerLink]="['/',result.id]" [routerLinkActive]="['active']"  class="list-group-item ">{{result.name}}</a>
+                </div>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
