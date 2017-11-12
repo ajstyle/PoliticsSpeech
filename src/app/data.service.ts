@@ -28,7 +28,7 @@ export class DataService {
             let sp=this.speechList.value;
             speech["id"]=new Date().getTime();
             sp.push(speech);
-            this.speechList.next(sp);
+          this.speechList.next(sp) ;
       }
 
    removeSpeech(speech){
@@ -40,9 +40,9 @@ export class DataService {
      console.log(speech);
     let sp=this.speechList.value.map(x=>{
       if(x.id!=speech["id"])
-        return x
+        return x ;
       else
-        return speech
+        return speech ;
   });
 
   console.log(sp);
@@ -58,7 +58,8 @@ export class DataService {
       if(name.indexOf(keyword)>=0||keywords.indexOf(keyword)>=0)
         return true
       else
-        return false})
+        return false ;
+    })
   else
     return []
 }
