@@ -9,7 +9,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "postinstall": "ng build --aot -prod",
-        "preinstall": "npm install -g http-server",
+        "preinstall": "npm install -g http-server && npm install -g angular-cli",
         "start": "http-server dist/"
     },
     "engines": {
