@@ -12,6 +12,10 @@
         "preinstall": "npm install -g http-server",
         "start": "http-server dist/"
     },
+    "engines": {
+        "node": "8.9.1",
+        "npm": "5.5.1"
+    },
     "private": true,
     "dependencies": {
         "@angular/animations": "^4.0.0",
